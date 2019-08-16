@@ -1,0 +1,18 @@
+services:
+pipeline:
+  build-docker-image-tag:
+    image: plugins/docker
+    registry:
+      from_secret: DOCKER_REGISTRY
+    repo:
+      from_secret: DOCKER_REPO
+    username:
+      from_secret: DOCKER_USERNAME
+    password:
+      from_secret: DOCKER_PASSWORD 
+    auto_tag: true
+    insecure: true
+    file: Dockerfile
+    when:
+      event: [push, tag]
+      status: [success]
