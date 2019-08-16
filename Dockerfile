@@ -14,4 +14,4 @@ RUN \
   rm -f pgweb_linux_amd64.zip
 
 EXPOSE 8080
-CMD ["/usr/bin/pgweb", "--bind=0.0.0.0", "--listen=8081"]
+CMD ["/usr/bin/pgweb", "--bind=0.0.0.0", "--listen=8080"]
