@@ -1,4 +1,4 @@
-# pgweb
+# pgweb test
 
 Web-based PostgreSQL database browser written in Go.
 
